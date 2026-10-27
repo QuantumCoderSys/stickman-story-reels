@@ -1,0 +1,50 @@
+{
+ "title": "My Story — Part 1",
+ "tag": "MY STORY · PART 1",
+ "wordmark": "MY STORY · @YOURHANDLE",
+ "theme": { "accent": "#F2A33A", "alert": "#E5484D", "cream": "#F2EEE6", "bg": "#0D1018", "bg_hi": "#1E2A3A", "bg_lo": "#05070B" },
+ "voices": { "narrator": { "voice": "Liam" } },
+ "pace": { "tempo": 1.15, "gap": 0.25, "scene_gap": 0.4, "end": 2.0 },
+ "captions": { "Part Two.": "Part 2." },
+ "hud": [ { "label": "TIME", "width": 150, "steps": [ ["11:59 PM", "0"], ["12:00 AM", "s2:start", "flash"] ] } ],
+ "sfx": [
+  { "sound": "heartbeat", "at": "0", "vol": 0.5 },
+  { "sound": "click", "at": "s1:stepped", "vol": 0.45 },
+  { "sound": "buzz", "at": "s2:buzzes", "vol": 0.6 },
+  { "sound": "hit", "at": "s2:own", "vol": 0.35 },
+  { "sound": "pulse", "at": "s4:Follow", "vol": 0.4 },
+  { "sound": "sting", "at": "s4:two", "vol": 0.3 }
+ ],
+ "bed": { "volume": 0.5, "cues": [
+  { "at": "0", "drone": 0.4, "wind": 0.5, "pulse": 0.2, "ramp": 0.5 },
+  { "at": "s4:Follow", "pulse": 0.3, "wind": 0.2, "ramp": 1.0 },
+  { "at": "s4:two+0.4", "drone": 0, "wind": 0, "pulse": 0, "ramp": 2.0 }
+ ] },
+ "scenes": [
+  { "id": "s1", "draw": "stHook('scene')", "kenburns": [1.0, 1.05, "45% 45%"],
+    "animate": [ { "el": "stTall", "to": { "x": 0 }, "at": "start", "dur": 1.4, "ease": "power2.out" },
+                 { "el": "stEyes", "to": { "opacity": 0.2, "repeat": 3, "yoyo": true }, "at": "stepped", "dur": 0.08, "ease": "steps(1)" } ],
+    "say": [ "[tense] It's midnight. You're alone at the edge of the woods. And something just stepped out of the trees." ] },
+  { "id": "s2", "draw": "stPhone()", "kenburns": [1.0, 1.06, "50% 40%"],
+    "animate": [ { "el": "stPh", "to": { "x": 8, "repeat": 9, "yoyo": true }, "at": "buzzes", "dur": 0.04, "ease": "none" },
+                 { "el": "stMsg", "to": { "opacity": 1 }, "at": "message", "dur": 0.2 } ],
+    "say": [ "Your phone buzzes. One message. From your own number." ] },
+  { "id": "s3", "draw": "stChoice('scene')", "kenburns": [1.0, 1.03, "50% 55%"],
+    "animate": [ { "el": "chA", "to": { "opacity": 1 }, "at": "Run", "dur": 0.25 }, { "el": "chB", "to": { "opacity": 1 }, "at": "Turn", "dur": 0.25 } ],
+    "say": [ "Run, and you never see what it is.", "Turn around, and it sees you too." ] },
+  { "id": "s4", "type": "vote", "title": ["FOLLOW &", "COMMENT BELOW"], "options": ["RUN", "TURN"], "subs": ["DON'T LOOK BACK", "TURN AROUND"],
+    "options_at": "Do", "option_words": ["run#1", "turn#1"],
+    "insets": [ { "draw": "stChoice('inset')", "box": [190, 200, 700, 500], "viewBox": "0 560 1080 771", "label": "THE WOODS · NOW", "border": "#F2A33A" },
+                { "draw": "stHook('cover')", "box": [190, 200, 700, 500], "viewBox": "60 300 1000 714", "label": "LOOK AGAIN", "border": "#E5484D", "at": "look" } ],
+    "say": [ "[urgent] Follow, and comment your vote down below. Do you run, or turn around? Run, or turn. The majority decides Part Two.",
+             "[whispers] And look at the trees in the first shot. There were two of them." ] }
+ ],
+ "cover": { "draw": "stCover()", "big": "MY STORY", "tag": "PART 1", "kicker": "MIDNIGHT. THE WOODS.", "line": "DON'T <b>TURN AROUND.</b>", "options": ["RUN", "TURN"] },
+ "post": {
+  "posts_at": "2026-11-01T19:00:00+00:00",
+  "vote_hours": 48,
+  "caption": "Something just stepped out of the trees. 🌲\n\n👉 Follow and comment your vote down below. The majority decides Part 2.\n\n👀 Watch to the very end.\n\n{vote_line}\n\n#horror #stickman #animation #storytime #youdecide",
+  "pinned": "👉 Follow and comment your vote: RUN or TURN. One vote per account. Voting closes {closes}.",
+  "alt": "Animated stick-figure horror: alone at the edge of the woods at midnight, something tall steps out of the trees, and a text arrives from your own number: don't turn around. Vote: run, or turn around."
+ }
+}

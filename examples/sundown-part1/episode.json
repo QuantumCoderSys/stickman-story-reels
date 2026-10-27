@@ -1,0 +1,756 @@
+{
+ "title": "Sundown — Part 1: Rule Two",
+ "tag": "SUNDOWN · PART 1",
+ "wordmark": "SUNDOWN · @YOURHANDLE",
+ "theme": {
+  "accent": "#F2A33A",
+  "alert": "#E5484D",
+  "cream": "#F2EEE6",
+  "bg": "#0D1018",
+  "bg_hi": "#1E2A3A",
+  "bg_lo": "#05070B"
+ },
+ "voices": {
+  "narrator": {
+   "voice": "Liam"
+  },
+  "dad": {
+   "voice": "Brian",
+   "tag": "DAD · 6 DAYS AGO",
+   "color": "#F2A33A"
+  },
+  "dadradio": {
+   "voice": "Brian",
+   "fx": "radio",
+   "tag": "DAD · RADIO",
+   "color": "#F2A33A"
+  }
+ },
+ "pace": {
+  "tempo": 1.15,
+  "gap": 0.25,
+  "scene_gap": 0.4,
+  "end": 2.0
+ },
+ "captions": {
+  "fourteen.": "14.",
+  "a hundred kilometers away.": "100 km away.",
+  "eight feet tall": "8 feet tall",
+  "six days ago.": "6 days ago.",
+  "Part Two.": "Part 2."
+ },
+ "hud": [
+  {
+   "label": "NIGHT",
+   "value": "7",
+   "width": 50
+  },
+  {
+   "label": "CITY",
+   "value": "100 KM",
+   "width": 130
+  }
+ ],
+ "sfx": [
+  {
+   "sound": "heartbeat",
+   "at": "0",
+   "vol": 0.5
+  },
+  {
+   "sound": "click",
+   "at": "s1:tall",
+   "vol": 0.45
+  },
+  {
+   "sound": "whoosh",
+   "at": "s1:faster-0.05",
+   "vol": 0.6
+  },
+  {
+   "sound": "hit",
+   "at": "s2:city",
+   "vol": 0.3
+  },
+  {
+   "sound": "slam",
+   "at": "s3:start-0.3",
+   "vol": 0.4
+  },
+  {
+   "sound": "engine",
+   "at": "s3:rules+0.2",
+   "vol": 0.35
+  },
+  {
+   "sound": "hit",
+   "at": "s3:never",
+   "vol": 0.3
+  },
+  {
+   "sound": "tap",
+   "at": "s4:One",
+   "vol": 0.3
+  },
+  {
+   "sound": "tap",
+   "at": "s4:Two",
+   "vol": 0.3
+  },
+  {
+   "sound": "tap",
+   "at": "s4:Three#1",
+   "vol": 0.3
+  },
+  {
+   "sound": "click",
+   "at": "s5:trees",
+   "vol": 0.45
+  },
+  {
+   "sound": "click",
+   "at": "s5:branches",
+   "vol": 0.45
+  },
+  {
+   "sound": "click",
+   "at": "s5:door",
+   "vol": 0.5
+  },
+  {
+   "sound": "whoosh",
+   "at": "s5:fast-0.05",
+   "vol": 0.55
+  },
+  {
+   "sound": "hit",
+   "at": "s5:stop",
+   "vol": 0.45
+  },
+  {
+   "sound": "squeak",
+   "at": "s6:window",
+   "vol": 0.5
+  },
+  {
+   "sound": "static",
+   "at": "s7:crackles",
+   "vol": 0.5
+  },
+  {
+   "sound": "pulse",
+   "at": "s8:two",
+   "vol": 0.35
+  },
+  {
+   "sound": "click",
+   "at": "s9:stops",
+   "vol": 0.5
+  },
+  {
+   "sound": "click",
+   "at": "s10:on",
+   "vol": 0.45
+  },
+  {
+   "sound": "pulse",
+   "at": "s11:Do",
+   "vol": 0.38
+  },
+  {
+   "sound": "hit",
+   "at": "s11:handwriting",
+   "vol": 0.35
+  }
+ ],
+ "bed": {
+  "volume": 0.5,
+  "cues": [
+   {
+    "at": "0",
+    "wind": 0.45,
+    "drone": 0.4,
+    "pulse": 0.2,
+    "ramp": 0.5
+   },
+   {
+    "at": "s3:start",
+    "wind": 0.25,
+    "drone": 0.15,
+    "pulse": 0,
+    "ramp": 0.6
+   },
+   {
+    "at": "s3:never",
+    "drone": 0.35,
+    "ramp": 1.2
+   },
+   {
+    "at": "s5:start",
+    "wind": 0.55,
+    "drone": 0.5,
+    "pulse": 0.3,
+    "ramp": 0.8
+   },
+   {
+    "at": "s7:start",
+    "wind": 0.3,
+    "pulse": 0.2,
+    "ramp": 0.6
+   },
+   {
+    "at": "s9:start",
+    "wind": 0.5,
+    "pulse": 0.4,
+    "ramp": 0.6
+   },
+   {
+    "at": "s11:Do",
+    "pulse": 0.25,
+    "drone": 0.3,
+    "ramp": 1.0
+   },
+   {
+    "at": "s11:handwriting+0.4",
+    "wind": 0,
+    "drone": 0,
+    "pulse": 0,
+    "ramp": 2.0
+   }
+  ]
+ },
+ "scenes": [
+  {
+   "id": "s1",
+   "draw": "sdHook(\"scene\")",
+   "kenburns": [
+    1.0,
+    1.05,
+    "40% 40%"
+   ],
+   "animate": [
+    {
+     "el": "hkTall",
+     "to": {
+      "x": 0
+     },
+     "at": "start-0.3",
+     "dur": 1.4,
+     "ease": "power2.out"
+    },
+    {
+     "el": "hkEyes",
+     "to": {
+      "opacity": 0.2,
+      "repeat": 3,
+      "yoyo": true
+     },
+     "at": "woods",
+     "dur": 0.08,
+     "ease": "steps(1)"
+    },
+    {
+     "el": "hkTall",
+     "to": {
+      "x": 1300
+     },
+     "at": "faster",
+     "dur": 0.14,
+     "ease": "power4.in"
+    },
+    {
+     "el": "hkStreak",
+     "to": {
+      "opacity": 1
+     },
+     "at": "faster",
+     "dur": 0.04
+    },
+    {
+     "el": "hkStreak",
+     "to": {
+      "opacity": 0
+     },
+     "at": "faster+0.3",
+     "dur": 0.25
+    }
+   ],
+   "say": [
+    "[tense] Every night, something eight feet tall comes out of these woods. And it runs faster than a car."
+   ]
+  },
+  {
+   "id": "s2",
+   "draw": "sdMap()",
+   "kenburns": [
+    1.0,
+    1.02,
+    "50% 50%"
+   ],
+   "animate": [
+    {
+     "el": "mpCam",
+     "to": {
+      "attr": {
+       "transform": "translate(0 0) scale(1)"
+      }
+     },
+     "at": "alone",
+     "dur": 3.2,
+     "ease": "power2.inOut"
+    },
+    {
+     "el": "mpCity",
+     "to": {
+      "opacity": 1
+     },
+     "at": "city",
+     "dur": 0.2
+    }
+   ],
+   "say": [
+    "You're fourteen. You're alone in a cabin. The nearest city is a hundred kilometers away."
+   ]
+  },
+  {
+   "id": "s3",
+   "draw": "sdDadLeaves()",
+   "kenburns": [
+    1.0,
+    1.04,
+    "50% 60%"
+   ],
+   "animate": [
+    {
+     "el": "ddWave",
+     "to": {
+      "rotation": -22,
+      "repeat": 5,
+      "yoyo": true
+     },
+     "origin": "190 1512",
+     "at": "Back",
+     "dur": 0.25,
+     "ease": "sine.inOut"
+    },
+    {
+     "el": "ddTruck",
+     "to": {
+      "x": 820
+     },
+     "at": "rules+0.2",
+     "dur": 2.4,
+     "ease": "power1.in"
+    },
+    {
+     "el": "ddDust",
+     "to": {
+      "opacity": 1,
+      "x": 300
+     },
+     "at": "rules+0.4",
+     "dur": 1.6,
+     "ease": "power1.out"
+    }
+   ],
+   "say": [
+    "Dad brought you here to keep you safe.",
+    {
+     "text": "[warm] Back by sundown, buddy. Remember the rules.",
+     "speaker": "dad"
+    },
+    "That was six days ago. He never came back."
+   ]
+  },
+  {
+   "id": "s4",
+   "draw": "sdRules(\"scene\")",
+   "kenburns": [
+    1.0,
+    1.05,
+    "50% 45%"
+   ],
+   "animate": [
+    {
+     "el": "rl1",
+     "to": {
+      "opacity": 1
+     },
+     "at": "One",
+     "dur": 0.2
+    },
+    {
+     "el": "rl2",
+     "to": {
+      "opacity": 1
+     },
+     "at": "Two",
+     "dur": 0.2
+    },
+    {
+     "el": "rl3",
+     "to": {
+      "opacity": 1
+     },
+     "at": "Three#1",
+     "dur": 0.2
+    },
+    {
+     "el": "rl3b",
+     "to": {
+      "opacity": 1
+     },
+     "at": "Not",
+     "dur": 0.2
+    }
+   ],
+   "say": [
+    "Before he left, he painted three rules on the wall.",
+    "One. Be inside before sundown. Two. Keep every light off.",
+    {
+     "text": "Three. Never open the door at night. Not even for me.",
+     "pause": 0.3
+    }
+   ]
+  },
+  {
+   "id": "s5",
+   "draw": "sdNight()",
+   "kenburns": [
+    1.0,
+    1.04,
+    "50% 60%"
+   ],
+   "animate": [
+    {
+     "el": "ntDusk",
+     "to": {
+      "opacity": 0
+     },
+     "at": "start",
+     "dur": 1.2
+    },
+    {
+     "el": "ntT1",
+     "to": {
+      "opacity": 1
+     },
+     "at": "trees",
+     "dur": 0.05
+    },
+    {
+     "el": "ntT1",
+     "to": {
+      "opacity": 0
+     },
+     "at": "branches",
+     "dur": 0.05
+    },
+    {
+     "el": "ntT2",
+     "to": {
+      "opacity": 1
+     },
+     "at": "branches",
+     "dur": 0.05
+    },
+    {
+     "el": "ntT2",
+     "to": {
+      "opacity": 0
+     },
+     "at": "door",
+     "dur": 0.05
+    },
+    {
+     "el": "ntT3",
+     "to": {
+      "opacity": 1
+     },
+     "at": "door",
+     "dur": 0.05
+    },
+    {
+     "el": "ntT3",
+     "to": {
+      "opacity": 0
+     },
+     "at": "fast",
+     "dur": 0.05
+    },
+    {
+     "el": "ntStreak",
+     "to": {
+      "opacity": 1
+     },
+     "at": "fast",
+     "dur": 0.04
+    },
+    {
+     "el": "ntStreak",
+     "to": {
+      "opacity": 0
+     },
+     "at": "fast+0.3",
+     "dur": 0.2
+    },
+    {
+     "el": "ntT4",
+     "to": {
+      "opacity": 1
+     },
+     "at": "stop",
+     "dur": 0.05
+    }
+   ],
+   "say": [
+    "When the sun goes down, they come out of the trees. Thin as branches. Taller than your door.",
+    {
+     "text": "And they move so fast, you only ever see them stop.",
+     "pause": 0.4
+    }
+   ]
+  },
+  {
+   "id": "s6",
+   "draw": "sdWindow()",
+   "kenburns": [
+    1.0,
+    1.05,
+    "40% 40%"
+   ],
+   "animate": [
+    {
+     "el": "wnTall",
+     "to": {
+      "x": 0,
+      "opacity": 1
+     },
+     "at": "stopped",
+     "dur": 0.12,
+     "ease": "power4.out"
+    },
+    {
+     "el": "wnTall",
+     "to": {
+      "opacity": 0
+     },
+     "at": "sunrise",
+     "dur": 0.6
+    },
+    {
+     "el": "wnDawn",
+     "to": {
+      "opacity": 1
+     },
+     "at": "sunrise",
+     "dur": 1.0
+    }
+   ],
+   "say": [
+    {
+     "text": "Last night, one stopped right outside your window. It stood there until sunrise.",
+     "pause": 0.3
+    }
+   ]
+  },
+  {
+   "id": "s7",
+   "draw": "sdRadio()",
+   "kenburns": [
+    1.0,
+    1.06,
+    "50% 45%"
+   ],
+   "talk": [
+    {
+     "el": "rdLed, rdWave",
+     "speaker": "dadradio"
+    }
+   ],
+   "say": [
+    "Tonight, Dad's radio crackles.",
+    {
+     "text": "[out of breath] Buddy, it's me. I'm close, but I can't find the cabin in the dark.",
+     "speaker": "dadradio"
+    },
+    {
+     "text": "[urgent] Turn on the porch light. Please.",
+     "speaker": "dadradio",
+     "pause": 0.4
+    }
+   ]
+  },
+  {
+   "id": "s8",
+   "draw": "sdRules(\"full\")",
+   "kenburns": [
+    1.04,
+    1.12,
+    "50% 45%"
+   ],
+   "animate": [
+    {
+     "el": "rlRing",
+     "to": {
+      "opacity": 1
+     },
+     "at": "two",
+     "dur": 0.2
+    }
+   ],
+   "say": [
+    "But rule two says keep every light off."
+   ]
+  },
+  {
+   "id": "s9",
+   "draw": "sdFlash()",
+   "kenburns": [
+    1.0,
+    1.05,
+    "50% 55%"
+   ],
+   "animate": [
+    {
+     "el": "fsLight",
+     "to": {
+      "attr": {
+       "transform": "translate(560 1300) scale(1.1)"
+      }
+     },
+     "at": "start-0.2",
+     "dur": 4.2,
+     "ease": "power1.in"
+    },
+    {
+     "el": "fsBob",
+     "to": {
+      "y": -14,
+      "repeat": 9,
+      "yoyo": true
+     },
+     "at": "start",
+     "dur": 0.35,
+     "ease": "sine.inOut"
+    },
+    {
+     "el": "fsTall",
+     "to": {
+      "opacity": 1
+     },
+     "at": "stops",
+     "dur": 0.05
+    }
+   ],
+   "say": [
+    {
+     "text": "Out in the trees, a flashlight is coming closer. And right behind it, something stops.",
+     "pause": 0.4
+    }
+   ]
+  },
+  {
+   "id": "s10",
+   "draw": "sdSwitch(\"scene\")",
+   "kenburns": [
+    1.0,
+    1.03,
+    "50% 55%"
+   ],
+   "animate": [
+    {
+     "el": "swOn",
+     "to": {
+      "opacity": 1
+     },
+     "at": "on",
+     "dur": 0.25
+    },
+    {
+     "el": "swOff",
+     "to": {
+      "opacity": 1
+     },
+     "at": "off",
+     "dur": 0.25
+    }
+   ],
+   "say": [
+    "Turn it on, and Dad can find you. So can they.",
+    "Keep it off, and you follow his rules. But he's out there in the dark."
+   ]
+  },
+  {
+   "id": "s11",
+   "type": "vote",
+   "title": [
+    "FOLLOW &",
+    "COMMENT BELOW"
+   ],
+   "options": [
+    "ON",
+    "OFF"
+   ],
+   "subs": [
+    "TURN THE LIGHT ON",
+    "KEEP IT OFF"
+   ],
+   "options_at": "Do",
+   "option_words": [
+    "on#1",
+    "off#1"
+   ],
+   "insets": [
+    {
+     "draw": "sdInsetSwitch()",
+     "box": [
+      190,
+      200,
+      700,
+      500
+     ],
+     "viewBox": "0 560 1080 771",
+     "label": "THE PORCH · NOW",
+     "border": "#F2A33A"
+    },
+    {
+     "draw": "sdRules(\"clue\")",
+     "box": [
+      190,
+      200,
+      700,
+      500
+     ],
+     "viewBox": "60 380 980 700",
+     "label": "DAD'S RULES",
+     "border": "#E5484D",
+     "at": "look"
+    }
+   ],
+   "say": [
+    "[urgent] Follow, and comment your vote down below. Do you turn the porch light on, or keep it off? On, or off. The majority decides Part Two.",
+    "[whispers] And look at the rules again. Rule two is in different handwriting."
+   ]
+  }
+ ],
+ "cover": {
+  "draw": "sdCover()",
+  "big": "SUNDOWN",
+  "tag": "PART 1",
+  "kicker": "100 KM FROM ANYONE.",
+  "line": "IT'S <b>8 FEET TALL.</b>",
+  "options": [
+   "ON",
+   "OFF"
+  ]
+ },
+ "post": {
+  "posts_at": "2026-10-25T19:00:00+05:30",
+  "vote_hours": 48,
+  "caption": "Every night, something 8 feet tall comes out of these woods. 🌲\n\n👉 Follow and comment your vote down below. The majority decides Part 2.\n\n👀 Watch to the very end. Read Dad's rules very carefully.\n\n{vote_line}\n\n#horror #scarystories #stickman #animation #storytime #youdecide",
+  "pinned": "👉 Follow and comment your vote: ON or OFF. One vote per account. Voting closes {closes}. Part 2 drops when it closes.",
+  "alt": "Animated stick-figure horror drawn in code, Part 1: a fourteen-year-old in a red beanie is alone in a cabin in the woods, 100 km from the nearest city. Dad left for supplies six days ago and never came back, leaving three rules painted on the wall: be inside before sundown, keep every light off, never open the door at night, not even for him. Every night, eight-foot creatures come out of the trees, so fast you only see them stop; last night one stood at the window until sunrise. Tonight Dad's voice on the radio asks you to turn on the porch light so he can find the cabin, while a flashlight comes through the trees with something right behind it. Vote: turn the porch light on, or keep it off.",
+  "tz_label": "IST"
+ }
+}

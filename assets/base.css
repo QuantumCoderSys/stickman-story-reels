@@ -1,0 +1,43 @@
+/* stickman-story-reels · base.css — 1080×1920 safe areas: HUD top-left, captions in the lower third, nothing under the
+   right-hand Instagram/TikTok buttons (captions stop 140 px from the right edge). Colours come from episode.json "theme". */
+:root { --ink:#17181C; --gold:#F2A33A; --cream:#F2EEE6; --red:#E5484D; --bg:#0D1018; --bg-hi:#1E2A3A; --bg-lo:#05070B; }
+* { margin:0; padding:0; box-sizing:border-box; }
+html, body { width:1080px; height:1920px; overflow:hidden; background:#0D1018; }
+#root { position:relative; width:100%; height:100%; overflow:hidden; font-family:Montserrat, sans-serif; color:#fff; }
+.scene { position:absolute; inset:0; overflow:hidden; background:#0D1018; }
+.kb { position:absolute; inset:0; }
+.kb svg { width:100%; height:100%; display:block; }
+
+/* HUD */
+#hud { position:absolute; left:80px; right:80px; top:150px; display:flex; gap:14px; }
+.pill { position:relative; background:rgba(9,12,22,.86); border:2px solid rgba(255,255,255,.14); border-radius:18px; padding:12px 18px; }
+.pill .l { position:relative; font-family:"IBM Plex Mono"; font-size:19px; letter-spacing:.1em; color:#9AA3B8; }
+.pill .v { position:relative; font-family:"IBM Plex Mono"; font-weight:700; font-size:36px; color:#fff; height:44px; }
+.pill .v span { position:absolute; left:0; top:0; white-space:nowrap; opacity:0; }
+.flash { position:absolute; inset:0; border-radius:18px; background:var(--red); opacity:0; }
+.hot { color:var(--red); }
+.tag { position:absolute; left:80px; top:262px; font-family:"IBM Plex Mono"; font-weight:700; font-size:24px; letter-spacing:.14em; padding:8px 16px; border-radius:10px; background:var(--gold); color:var(--ink); }
+
+/* captions */
+#captions { position:absolute; left:80px; right:140px; top:1236px; height:220px; }
+.cap { position:absolute; left:0; right:0; top:0; text-align:center; font-family:Montserrat; font-weight:900; font-size:70px; line-height:1.08; color:#fff; opacity:0;
+  text-shadow: 0 0 2px #000, 3px 3px 0 #0b0b0b, -3px 3px 0 #0b0b0b, 3px -3px 0 #0b0b0b, -3px -3px 0 #0b0b0b, 0 4px 0 #0b0b0b, 0 -4px 0 #0b0b0b, 4px 0 0 #0b0b0b, -4px 0 0 #0b0b0b, 0 10px 30px rgba(0,0,0,.6); }
+.cap span { display:inline-block; margin:0 .11em; }
+.cap .ctag { display:block; width:max-content; margin:0 auto 6px; padding:4px 14px; border-radius:10px; background:rgba(5,7,10,.82); font-family:"IBM Plex Mono"; font-weight:700; font-size:26px; letter-spacing:.14em; line-height:1.2; text-shadow:none; }
+
+/* on-scene extras */
+.chip { position:absolute; font-family:"Archivo Black"; font-size:52px; color:var(--ink); background:var(--cream); border:5px solid var(--ink); border-radius:18px; padding:8px 26px; box-shadow:0 8px 0 var(--ink); white-space:nowrap; opacity:0; }
+.stamp { position:absolute; font-family:"Archivo Black"; color:#D33A2C; border:7px solid #D33A2C; border-radius:14px; padding:6px 22px; font-size:56px; letter-spacing:.04em; white-space:nowrap; opacity:0; }
+
+/* the vote card */
+.end { position:absolute; inset:0; background:radial-gradient(90% 60% at 50% 42%, var(--bg-hi) 0%, var(--bg) 55%, var(--bg-lo) 100%); }
+.end .k { position:absolute; left:0; right:0; top:470px; text-align:center; font-family:"IBM Plex Mono"; font-weight:700; font-size:30px; letter-spacing:.16em; color:var(--gold); }
+.end .t { position:absolute; left:0; right:0; top:752px; text-align:center; font-family:"Archivo Black"; font-size:76px; line-height:1.05; color:var(--cream); }
+.btns { position:absolute; left:80px; right:160px; top:952px; display:flex; gap:40px; }
+.btn { flex:1; height:170px; border-radius:30px; display:flex; flex-direction:column; gap:4px; align-items:center; justify-content:center; font-family:"Archivo Black"; font-size:68px; border:6px solid #050505; box-shadow:0 12px 0 #050505; background:var(--cream); color:var(--ink); opacity:0; }
+.btn .bsub { font-family:"IBM Plex Mono"; font-weight:700; font-size:26px; letter-spacing:.06em; color:#4A4F55; }
+.inset { position:absolute; border:4px solid var(--gold); background:#05090C; box-shadow:0 18px 50px rgba(0,0,0,.55); }
+.inset svg { position:absolute; inset:0; width:100%; height:100%; display:block; }
+.inset::after { content:""; position:absolute; inset:0; background:repeating-linear-gradient(0deg, rgba(0,0,0,.16) 0 2px, transparent 2px 6px); pointer-events:none; }
+.inset .inlbl { position:absolute; left:-4px; top:-58px; height:50px; padding:6px 14px; background:#05090C; border-radius:10px; font-family:"IBM Plex Mono"; font-weight:700; font-size:28px; letter-spacing:.06em; white-space:nowrap; }
+.wordmark { position:absolute; left:0; right:0; top:1470px; text-align:center; font-family:"IBM Plex Mono"; font-weight:700; font-size:30px; letter-spacing:.3em; color:rgba(242,238,230,.55); }
