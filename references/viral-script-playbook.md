@@ -33,7 +33,7 @@ A rewatch counts as watch time, so a reel that loops can go past 100% of its len
 
 ## 2. The 13 writing rules
 
-These come from real feedback. Each one fixed a draft that viewers or the owner found confusing or boring.
+These come from real feedback. Each one fixed a draft that viewers or the creator found confusing or boring.
 
 1. **Say where, when and who in the first 5 seconds.** "You're fourteen. You're alone in a cabin. The nearest city is a hundred kilometers away." A number makes it concrete (100 km, day 9, 3:33 AM, six floors).
 2. **One concrete fact per sentence**, something the viewer can see or hear right now. Use no jargon and no abstractions. "Every bite up here is dark. Except yours." is good. "Your unique immunological profile" is not.

@@ -22,6 +22,7 @@ This is the workflow behind the **PlotVote** interactive stories (@plotvote), wh
 # 1. put the skill where Claude Code looks for skills
 git clone https://github.com/QuantumCoderSys/stickman-story-reels.git ~/.claude/skills/stickman-story-reels
 #    (or download stickman-story-reels.zip from the Releases page and unzip it into ~/.claude/skills/)
+#    https://github.com/QuantumCoderSys/stickman-story-reels/releases/latest
 
 # 2. tools it needs
 python3 --version   # 3.9+
